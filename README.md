@@ -21,14 +21,14 @@ For each available upgrade, it will then:
 Run the following command in your project root:
 
 ```
-podkeeper --branch develop --project <project id> --private-token <token>
+podkeeper --branch <branch> --project <project id> --token <token>
 ```
 
 Required options:
  - `--branch`: The branch that PodKeeper will checkout to scan your project. Usually you want this to be
  your most up to date development branch.
  - `--project`: The project ID of the project in GitLab.
- - `--private-token`: A GitLab private token that has access to the project.
+ - `--token`: A GitLab private token that has access to the project.
 
 Optional options:
  - `--dry`: When set, PodKeeper will do a dry run and indicate what will happen without making any actual changes.
