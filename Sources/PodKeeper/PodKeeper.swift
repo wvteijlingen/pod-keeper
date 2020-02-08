@@ -1,4 +1,4 @@
-import Foundation
+import Darwin
 import Alamofire
 
 struct PodKeeper {
@@ -102,22 +102,5 @@ struct PodKeeper {
             exit(1)
         }
         return result
-    }
-}
-
-extension String {
-    func groups(for regex: NSRegularExpression) -> [[String]] {
-        let text = self
-        let matches = regex.matches(in: text,
-                                    range: NSRange(text.startIndex..., in: text))
-        return matches.map { match in
-            return (0..<match.numberOfRanges).map {
-                let rangeBounds = match.range(at: $0)
-                guard let range = Range(rangeBounds, in: text) else {
-                    return ""
-                }
-                return String(text[range])
-            }
-        }
     }
 }

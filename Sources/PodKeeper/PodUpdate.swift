@@ -1,5 +1,3 @@
-import Foundation
-
 struct PodUpdate {
     var podName: String
     var fromVersion: String
