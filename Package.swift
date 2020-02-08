@@ -6,7 +6,10 @@ import PackageDescription
 let package = Package(
     name: "PodKeeper",
     platforms: [
-        .macOS(.v10_13)
+        .macOS(.v10_12)
+    ],
+    products: [
+        .executable(name: "podkeeper", targets: ["PodKeeper"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-tools-support-core.git", from: "0.0.1"),
